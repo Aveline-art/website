@@ -53,6 +53,10 @@ permalink: /project-meetings
 </div>
 
 <script>
+        // NOTE TO AVA: The reason why both the vrms_data is used and the api call is done is because the vrms data is a backup should the api call ever fail. The vrms data will always be here. See #550 for hints.
+    // A better logic for this page might be simply: If api call returns error, use vrms data, else use api data.
+
+
     // Assigns local JSON Data to localData variable
     {% assign localData = site.data.external.vrms_data | jsonify %}
     let localData = {{ localData }};
