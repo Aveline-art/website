@@ -14,6 +14,8 @@ description: Can you design, write, or code? Are you an activist with an idea? Y
 
 baseurl: ""
 url: https://www.hackforla.org
+plugins:
+  - jekyll-sitemap
 
 
 # When/Before creating a new collections remember these two pieces of advice and ask yourself. Should you?
@@ -51,8 +53,10 @@ defaults: # The `defaults` key holds an array of scope/values pairs that define 
       type: "guide-pages"
     values:
       layout: "guide-pages"
+  - scope:
+      path: assets/**
+    values:
+      sitemap: false
 
-plugins:
-  - jekyll-sitemap
 
 
