@@ -14,6 +14,7 @@ description: Can you design, write, or code? Are you an activist with an idea? Y
 
 baseurl: website/
 url: "aveline-art.github.io"
+permalink: /:title
 plugins:
   - jekyll-sitemap
 
