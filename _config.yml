@@ -54,7 +54,7 @@ defaults: # The `defaults` key holds an array of scope/values pairs that define 
     values:
       layout: "guide-pages"
   - scope:
-      path: "website/assets/js/**"
+      path: "toolkit/"
     values:
       sitemap: false
 
