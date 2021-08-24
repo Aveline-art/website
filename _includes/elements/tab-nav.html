@@ -1,0 +1,13 @@
+{% assign title_list = include.titles %}
+{% assign id_list = include.ids %}
+{% assign size = title_list.size | minus: 1 %}
+<nav class="tab-nav">
+    {% for i in (0..size) %}
+    {% if forloop.first == true %}
+    <a href="#{{ title_list[i] | replace: ' ', '+' }}" class="tab-item selected"
+        data-panel-id="#{{ id_list[i] }}">{{ title_list[i] }}</a>
+    {% else %}
+    <a href="#{{ title_list[i] | replace: ' ', '+' }}" class="tab-item" data-panel-id="#{{ id_list[i] }}">{{ title_list[i] }}</a>
+    {% endif %}
+    {% endfor %}
+</nav>

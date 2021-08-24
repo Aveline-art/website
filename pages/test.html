@@ -1,0 +1,61 @@
+---
+title: test
+permalink: /test
+---
+<!-- Header banner -->
+<div class="header-container flex-container">
+    <div class="header-text">
+        <h1 class="title1">Test Page</h1>
+        <p>Toolkit implies that there is one set of tools that is perfect for the job you are tackling!
+            What you will find here are tools we have found to be effective. Think of this as the most awesome
+            collective tool shed!
+            Here you can find, share, and suggest tools that are of use to the open source civic tech software
+            community.</p>
+    </div>
+    <img class="header-hero-image" src="/assets/images/toolkit/toolkit-hero.svg" alt="" />
+</div>
+
+
+{% assign titles = "Citizen Engagement|Civic Tech Infrastructure|Diversity, Equity, and
+Inclusion|Environment|Justice|Social Safety Net|Vote + Representation|Workforce Development" | split: "|" %}
+{% assign id_list = "citizen-engagement|infrastructure|diversity|environment|justice|social-safety|vote|workforce" |
+split: "|" %}
+
+<nav class="tab-nav">
+    {% for id in id_list %}
+    {% if forloop.first == true %}
+    <a href="#{{ titles[forloop.index0] | replace: ' ', '+' }}" class="tab-item selected" data-panel-id="#{{ id }}">{{
+        titles[forloop.index0] }}
+    </a>
+    {% else %}
+    <a href="#{{ titles[forloop.index0] | replace: ' ', '+' }}" class="tab-item" data-panel-id="#{{ id }}">{{
+        titles[forloop.index0] }}
+    </a>
+    {% endif %}
+    {% endfor %}
+</nav>
+
+{% assign sorted_program_areas = site.data.internal.program-areas | sort %}
+<div class="tab-nav-panels">
+    {% for program_area in sorted_program_areas %}
+    {% if forloop.first == true %}
+    <div class="tab-panel reveal" id="{{ id_list[forloop.index0] }}">
+        {% include elements/program-area-card.html content=program_area %}
+    </div>
+    {% else %}
+    <div class="tab-panel" id="{{ id_list[forloop.index0] }}">
+        {% include elements/program-area-card.html content=program_area %}
+    </div>
+    {% endif %}
+    {% endfor %}
+</div>
+
+{% assign size = winsData.size | minus: 1 %}
+{% assign winsJSON = site.data.external._wins-data | reverse %}
+<ul id="responses" class="project-list unstyled-list">
+    {% for data in winsJSON %}
+    {% include elements/wins-card.html data=data %}
+    {% endfor %}
+</ul>
+
+<script src="../assets/js/elements/tabNav.js" type="module"></script>
