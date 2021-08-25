@@ -15,12 +15,13 @@ permalink: /test
     <img class="header-hero-image" src="/assets/images/toolkit/toolkit-hero.svg" alt="" />
 </div>
 
-
+<!-- Assigning variables to titles and a list of associated ids -->
 {% assign titles = "Citizen Engagement|Civic Tech Infrastructure|Diversity, Equity, and
 Inclusion|Environment|Justice|Social Safety Net|Vote + Representation|Workforce Development" | split: "|" %}
 {% assign id_list = "citizen-engagement|infrastructure|diversity|environment|justice|social-safety|vote|workforce" |
 split: "|" %}
 
+<!-- Creates the navagation found in the toolkit page, using the titles and id_list variables -->
 <nav class="tab-nav">
     {% for id in id_list %}
     {% if forloop.first == true %}
@@ -35,6 +36,9 @@ split: "|" %}
     {% endfor %}
 </nav>
 
+<!-- Assign all program areas as a sorted variable -->
+<!-- Uses the same ids from the navagation to link the navagation to the panel -->
+<!-- Each panel contains a program area card -->
 {% assign sorted_program_areas = site.data.internal.program-areas | sort %}
 <div class="tab-nav-panels">
     {% for program_area in sorted_program_areas %}
@@ -50,7 +54,9 @@ split: "|" %}
     {% endfor %}
 </div>
 
-{% assign size = winsData.size | minus: 1 %}
+
+<!-- Get the wins JSON (which is an array of JSON objects) -->
+<!-- For every item in the JSON, make a wins card -->
 {% assign winsJSON = site.data.external._wins-data | reverse %}
 <ul id="responses" class="project-list unstyled-list">
     {% for data in winsJSON %}
