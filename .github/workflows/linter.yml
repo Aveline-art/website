@@ -2,7 +2,7 @@ name: Lint Code Base
 
 on:
   pull_request:
-    branches: [gh-pages]
+    branches: [gh-pages, averdin2-1441-scss-lint-gh-action]
 
 jobs:
   build:
@@ -20,7 +20,7 @@ jobs:
         uses: github/super-linter@v4
         env:
           VALIDATE_ALL_CODEBASE: false
-          DEFAULT_BRANCH: gh-pages
+          DEFAULT_BRANCH: averdin2-1441-scss-lint-gh-action
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
 
