@@ -1,10 +1,10 @@
 # How to Contribute
 
-👍🎉 First off, thanks for taking the time to contribute! 🎉👍
+👍🎉 First off, thank you for taking the time to contribute! 🎉👍
 
-The following is a set of guidelines for contributing to the website repository, which is hosted on GitHub. These are mostly guidelines, not rules. Use your best judgment, and feel free to propose changes to this document in a pull request.
+The following is a set of guidelines for contributing to our Github-hosted website repository. These are mostly guidelines, not rules. You might find that some of these instructions do not work for you. In that case, feel free to propose changes here [TODO add link to our contributing issue template|.
 
-** <sub>The guide below assumes that you have completed the onboarding process which includes joining the Hack for LA Slack, GitHub, and Google Drive. If you have not been onboarded, please refer to the [Getting Started Page](https://www.hackforla.org/getting-started).</sub>
+** The guide below assumes that you have completed the onboarding process which includes an orientation and joining the Hack for LA Slack, GitHub, and Google Drive. If you have not been onboarded, please refer to the [Getting Started Page](https://www.hackforla.org/getting-started).
 
 ** <sub>If you need a text editor to work on code, [VS Code](https://code.visualstudio.com/download) is recommended by the team, but feel free to use a text editor of your choice.</sub>
 
@@ -52,11 +52,13 @@ Once you have accepted the GitHub invite (comes via email or in your GitHub noti
 
 ## Installing Git
 
-Before cloning your forked repository to your local machine, you must have Git installed. You can find instructions for installing Git for your operating system [**here**](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git). Please note that if you have a Mac the page offers several options (see other option, if you need to conserve hard drive space) including:
+Before cloning your forked repository to your local machine, you must have Git installed. You can find instructions for installing Git for your operating system [**here**](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git).
 
-- an “easiest” option (this version is fine for use at hackforla): This option would take just over 4GB.
+Note: If you have a Mac the page offers several options (see other option, if you need to conserve hard drive space) including:
+
+- an “easiest” option (this version is fine for use at hackforla): This option takes about 4GB of space.
 - a “more up to date” option (not required but optional if you want it): This option prompts you to go to install an 8GB package manager called Homebrew. 
-- Other option: If your computer is low on space, you can use this [tutorial](https://www.datacamp.com/community/tutorials/homebrew-install-use) to install XCode Command Tools and a lighter version of Homebrew and then install Git using this command: ```$ brew install git```  which in total only uses 300MB.
+- a third option: If your computer is low on space, you can use this [tutorial](https://www.datacamp.com/community/tutorials/homebrew-install-use) to install XCode Command Tools and a lighter version of Homebrew and then install Git using this command: ```$ brew install git```  which in total only uses 300MB.
 
 ## Fork the repository
 
@@ -71,7 +73,7 @@ Note that this forked copy is a remote version on GitHub. It is not yet on your 
 
 ## Clone the forked repository
 
-Before cloning your forked repository to your local machine, you must have Git installed. You can find instructions for installing Git for your operating system [**here**](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git). 
+Before cloning your forked repository to your local machine, you must have Git installed. You can find instructions for installing Git for your operating system [**here**](#Installing-Git). 
 
 The following steps will create a local copy of the repository on your machine.
 
