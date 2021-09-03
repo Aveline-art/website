@@ -15,11 +15,11 @@ The following is a set of guidelines for contributing to our Github-hosted websi
 # Table of Contents
 ### Setting up the development environment
 1. [Join the repository team](#Join-the-repository-team)
-2. [Installing Git](#Installing-Git)
-3. [Fork the repository](#Fork-the-repository)
-4. [Clone the forked repository](#Clone-the-forked-repository)
-5. [Set up Docker](#Set-up-Docker-[4])
-6. [Build and serve the website locally](#Build-and-serve-the-website-locally)
+2. [Set up Docker](#Set-up-Docker-[4])
+3. [Installing Git](#Installing-Git)
+4. [Fork the repository](#Fork-the-repository)
+5. [Clone the forked repository](#Clone-the-forked-repository)
+7. [Build and serve the website locally](#Build-and-serve-the-website-locally)
 ### Working on an issue and making a pull request
 1. [Working on an issue](#Working-on-an-issue)
    - [Check current branch](#Check-current-branch)
@@ -49,6 +49,27 @@ Once you have accepted the GitHub invite (comes via email or in your GitHub noti
 
 2. Set up two-factor authentication on your account by following this [guide](https://docs.github.com/en/github/authenticating-to-github/configuring-two-factor-authentication).
 
+## Set up Docker
+
+Docker is the recommended approach to quickly getting started with local development. Docker helps create a local/offline version of the hackforla.org website on your computer so you can test out your code before submitting a pull request.
+
+The recommended installation method for your operating system can be found [here](https://docs.docker.com/install/). <sub><i>Feel free to reach out in the hfla slack channel if you have trouble installing docker on your system</i></sub>
+
+More on using Docker and the concepts of containerization:
+
+* [Get started with Docker](https://docs.docker.com/get-started/)
+* [Install Docker Desktop on Mac](https://docs.docker.com/desktop/mac/install/)
+* [Install Docker Desktop on Windows](https://docs.docker.com/desktop/windows/install/)
+
+<details>
+<summary>Docker Installation Troubleshooting</summary>
+
+If you are on Windows and get 'You are not allowed to use Docker, you must be in the "docker-users" group' as an error message, the following wiki page is a guide for solving te issue:
+- [Windows docker-users group error guide](https://github.com/hackforla/website/wiki/Adding-local-user-accounts-to-the-docker-users-group-on-Windows-10)
+
+Installing WSL2 on windows
+- https://docs.microsoft.com/en-us/windows/wsl/install-win10
+</details>
 
 ## Installing Git
 
@@ -73,21 +94,13 @@ Note that this forked copy is a remote version on GitHub. It is not yet on your 
 
 ## Clone the forked repository
 
-Before cloning your forked repository to your local machine, you must have Git installed. You can find instructions for installing Git for your operating system [**here**](#Installing-Git). 
+Before cloning your forked repository to your local machine, you must have Git installed. You can find instructions for installing Git for your operating system [**here**](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git). 
 
 The following steps will create a local copy of the repository on your machine.
 
-   1. Create a new folder on your machine that will contain `hackforla` projects.
+   1. Create a new folder on your machine called `hackforla`. This folder will contain our projects
 
-      In your command line interface (Terminal, Git Bash, Powershell), navigate into the folder(directory) you just created.
-      
-      For example: 
-      ```bash
-      cd Desktop
-      cd hackforla
-      ```
-      
-      and run the following commands:
+      In your command line interface (Terminal, Git Bash, Powershell), navigate into the folder(directory) you just created and run the following command:
       
       ```bash
       git clone https://github.com/<your_GitHub_user_name>/website.git
@@ -98,14 +111,19 @@ The following steps will create a local copy of the repository on your machine.
       git clone https://github.com/octocat/website.git
       ```
 
-      You should now have a new folder in your `hackforla` folder called `website`. Verify this by changing into the new directory:
-      ```bash
-      cd website
+      If your setup is correct, this should now be your directory structure.
+      
+      ```
+      .
+      ├── hackforla
+      │   └── website
+      |       └── [...]
       ```
 
   2. Verify that your local cloned repository is pointing to the correct `origin` URL (that is, the forked repo on your own Github account):
 
      ```bash
+     cd website
      git remote -v
      ```
      You should see `fetch` and `push` URLs with links to your forked repository under your account (i.e. `https://github.com/<your_GitHub_user_name>/website.git`). You are all set to make working changes to the website on your local machine.
@@ -140,25 +158,6 @@ The following steps will create a local copy of the repository on your machine.
       git remote add upstream https://github.com/hackforla/website.git
       ```
       </details>
-## Set up Docker
-
-Docker is the recommended approach to quickly getting started with local development. Docker helps create a local/offline version of the hackforla.org website on your computer so you can test out your code before submitting a pull request.
-
-The recommended installation method for your operating system can be found [here](https://docs.docker.com/install/). <sub><i>Feel free to reach out in the hfla slack channel if you have trouble installing docker on your system</i></sub>
-
-More on using Docker and the concepts of containerization:
-
-* [Get started with Docker](https://docs.docker.com/get-started/)
-
-<details>
-<summary>Docker Installation Troubleshooting</summary>
-
-If you are on Windows and get 'You are not allowed to use Docker, you must be in the "docker-users" group' as an error message, the following wiki page is a guide for solving te issue:
-- [Windows docker-users group error guide](https://github.com/hackforla/website/wiki/Adding-local-user-accounts-to-the-docker-users-group-on-Windows-10)
-
-Installing WSL2 on windows
-- https://docs.microsoft.com/en-us/windows/wsl/install-win10
-</details>
 
 ## Build and serve the website locally
 ### Build Up
