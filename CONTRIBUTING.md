@@ -4,11 +4,8 @@
 
 The following is a set of guidelines for contributing to our Github-hosted website repository. These are mostly guidelines, not rules. You might find that some of these instructions do not work for you. In that case, feel free to propose changes here [TODO add link to our contributing issue template|.
 
-** The guide below assumes that you have completed the onboarding process which includes an orientation and joining the Hack for LA Slack, GitHub, and Google Drive. If you have not been onboarded, please refer to the [Getting Started Page](https://www.hackforla.org/getting-started).
+Note: The guide below assumes that you have completed the onboarding orientation. If you have not been onboarded, please refer to the [Getting Started Page](https://www.hackforla.org/getting-started) before continuing.
 
-** <sub>If you need a text editor to work on code, [VS Code](https://code.visualstudio.com/download) is recommended by the team, but feel free to use a text editor of your choice.</sub>
-
-** <sub>If you have any other questions about your contributing process, feel free to reach out to the team in the [#hfla-site](https://hackforla.slack.com/archives/C4UM52W93) slack channel.</sub>
 <br><br>
 
 
@@ -41,9 +38,12 @@ The following is a set of guidelines for contributing to our Github-hosted websi
 # Setting up the development environment
 ## Join the repository team
 
-In the `hfla-site` Slack channel, send an introductory message with your GitHub handle/username asking to be added to the Hack for LA website GitHub repository (this repository).
+In the [#hfla-site](https://hackforla.slack.com/archives/C4UM52W93) Slack channel, send an introductory message asking to join the website team. In your introduction, you must provide the following information so that the team can set you up:
 
-Once you have accepted the GitHub invite (comes via email or in your GitHub notifications), please do the following:
+1. Your GitHub handle
+2. Your gmail account name
+
+Afterwards, you should receive an invitation to our repository. Once you have accepted the GitHub invite, please do the following:
 
 1. Make your own Hack for LA GitHub organization membership public by following this [guide](https://help.github.com/en/articles/publicizing-or-hiding-organization-membership#changing-the-visibility-of-your-organization-membership).
 
@@ -159,19 +159,39 @@ The following steps will create a local copy of the repository on your machine.
       ```
       </details>
 
+## Assigning yourself an issue
+   
+   To contribute to the website project, the first step is to assign yourself an issue. Thankfully, GitHub provides documentation on [how to navigate assigning issues](https://docs.github.com/en/issues/tracking-your-work-with-issues/assigning-issues-and-pull-requests-to-other-github-users), which should get you started. At the website team, we manage our issues [through labels](https://docs.github.com/en/issues/using-labels-and-milestones-to-track-work/managing-labels). <!-- TODO, replace with wiki for labels --> For now, the labels you need to be aware of are:
+   
+   `Size: Good first issue`: issues to get new members started
+   `Size: Good second issue`: issues that further prepare members for our team
+   `Size: Small`: issues that are made for those who are comfortable with starting small
+   `Size: Medium`: issues for members who somewhat understand our culture and codebase  
+   `Size: Large`: issues for members who have been in the team for a while, and has mastered our codebase
+   `role: front end`: issues involving front end work
+   `role: back end/devOps`: issues involving automations or architecture
+   `role: writing`: issues involving documentation
+   `role: product`: reserved for the product team
+   `role: user research`: reserved for the research team
+   `role: design`: reserved for the design team
+
+   As a new member, you are expected to do issues along a size progression. For now, go ahead and assign yourself a `Size: Good first issue` from our [`Prioritized backlog`](https://github.com/hackforla/website/projects/7#column-7198257). Once that issue is complete (see below on how to work on an issue and putting it under review), your next issue should be `Size: Good second issue`, and then you can take any issue you desire from small to large.
+   As a final note, most members should only be assigned one open issue at any time, and an issue cannot be considered done until review is completed! Until your issue is approved, do not take another issue until approved by a team lead!
+   
+
 ## Build and serve the website locally
 ### Build Up
 
 - This command starts a jekyll server locally. The server watches for changes to
 the source files and rebuilds and refreshes the site automatically in your browser.
 
-  Navigate to within the `website` directory that you cloned earlier in your terminal then run the below command
+  Navigate to the `website` directory that you cloned earlier. Then, run the below command:
 
    ```bash
    docker-compose up
    ```
 
-   Running the above command will result in the following output in your terminal
+   Running the above command will result in the following output in your terminal:
 
   <details>
   <summary>Terminal Output</summary>
@@ -198,11 +218,17 @@ the source files and rebuilds and refreshes the site automatically in your brows
 
   </details>
 
-   When you see the above output, it means the site is now running and now you can browse to http://localhost:4000
+   When you see the above output, it means the site is now running and now you can browse to http://localhost:4000.
 
 ### Tear Down
+   
+ - For most day-to-day work scenarios, you would want to stop the server but not destory it. To stop working, create a new terminal instance and run this command:
+   
+   ```bash
+   docker-compose stop
+   ```
 
- - To stop and completely remove the jekyll server (i.e. the running Docker container):
+ - To stop and completely remove the jekyll server (i.e. the running Docker container), run this command instead:
 
    *(do this anytime Docker or jekyll configuration or other repository settings change)*
 
@@ -210,14 +236,7 @@ the source files and rebuilds and refreshes the site automatically in your brows
    docker-compose down
    ```
 
-
-   To stop the server, but not destroy it (often sufficient for day-to-day work):
-
-   ```bash
-   docker-compose stop
-   ```
-
-   Bring the same server back up later with:
+   Later, you can bring the same server back up with:
 
    ```bash
    docker-compose up
