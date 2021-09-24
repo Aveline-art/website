@@ -35,7 +35,6 @@ Note: The guide below assumes that you have completed the onboarding orientation
    - [Docker Desktop](https://docs.docker.com/install/)
 
 # Joining the team
-## Join the repository team
 
 If you are interested in joining our team and getting access to our repository beyond just public access, please make sure to complete the below action items:
 
@@ -45,7 +44,18 @@ If you are interested in joining our team and getting access to our repository b
 
 > ``` Hi! I am ___ and I would love to join the website team! I have learned about coding/design/product management/ect from ___ and I hope that joining this team will ___. My GitHub is ___ and my Gmail is ___. Please add me to your GitHub team and your Google Drive. Thank you! :D ```
 
-After completing the above, you should receive an invite to our repository (please check the email linked to your GitHub account) and our Google Drive. Once you have accepted the invitations be sure to make your  Hack for LA GitHub organization membership [public](https://help.github.com/en/articles/publicizing-or-hiding-organization-membership#changing-the-visibility-of-your-organization-membership).
+After completing the above, you should receive 1) an invite to our repository (please check the email linked to your GitHub account), 2) an invite to our Google Drive, and 3) further instructions on how to join the team. Once you have accepted the invitations be sure to make your  Hack for LA GitHub organization membership [public](https://help.github.com/en/articles/publicizing-or-hiding-organization-membership#changing-the-visibility-of-your-organization-membership).
+
+# Creating and Assigning your First Issue
+
+After accepting our repository invite, it is time to follow the instructions below to create your first issue.
+
+1. Navigate to our project’s front page and click on the issues tab.
+2. Click the green “New issue” button to view our issue templates. Feel free to read through them to get a sense of what is there.
+3. For your first issue, pick “My Very First Issue” and follow the on-screen instructions.
+4. Once you are done, click submit!
+5. After submitting, you will see the issue page. In the corner, click assign yourself.
+
 
 # Setting up the development environment
 
