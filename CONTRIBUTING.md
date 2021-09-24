@@ -2,7 +2,7 @@
 
 👍🎉 First off, thank you for taking the time to contribute! 🎉👍
 
-The following is a set of guidelines for contributing to our Github-hosted website repository. These are mostly guidelines, not rules. You might find that some of these instructions do not work for you. In that case, feel free to propose changes here [TODO add link to our contributing issue template|.
+The following are a set of instructions to get you started on contributing to our repository. This guide includes [TODO]. You might find that some of these instructions do not work for you. In that case, feel free to propose changes here [TODO add link to our contributing issue template].
 
 Note: The guide below assumes that you have completed the onboarding orientation. If you have not been onboarded, please refer to the [Getting Started Page](https://www.hackforla.org/getting-started) before continuing.
 
@@ -34,20 +34,20 @@ Note: The guide below assumes that you have completed the onboarding orientation
    - [Docker Compose](https://docs.docker.com/compose/gettingstarted/)
    - [Docker Desktop](https://docs.docker.com/install/)
 
-
-# Setting up the development environment
+# Joining the team
 ## Join the repository team
 
-In the [#hfla-site](https://hackforla.slack.com/archives/C4UM52W93) Slack channel, send an introductory message asking to join the website team. In your introduction, you must provide the following information so that the team can set you up:
+If you are interested in joining our team and getting access to our repository beyond just public access, please make sure to complete the below action items:
 
-1. Your GitHub handle
-2. Your gmail account name
+- [ ] Complete an [onboarding session](https://www.hackforla.org/getting-started)
+- [ ] Create and set up two-factor authentication for both your [GitHub](https://docs.github.com/en/github/authenticating-to-github/configuring-two-factor-authentication) and [Gmail account](https://www.google.com/landing/2step/)
+- [ ] Send an introductory message in the #hfla-site Slack channel with your GitHub handle and Gmail account name. Feel free to use the below template:
 
-Afterwards, you should receive an invitation to our repository. Once you have accepted the GitHub invite, please do the following:
+> ``` Hi! I am ___ and I would love to join the website team! I have learned about coding/design/product management/ect from ___ and I hope that joining this team will ___. My GitHub is ___ and my Gmail is ___. Please add me to your GitHub team and your Google Drive. Thank you! :D ```
 
-1. Make your own Hack for LA GitHub organization membership public by following this [guide](https://help.github.com/en/articles/publicizing-or-hiding-organization-membership#changing-the-visibility-of-your-organization-membership).
+After completing the above, you should receive an invite to our repository (please check the email linked to your GitHub account) and our Google Drive. Once you have accepted the invitations be sure to make your  Hack for LA GitHub organization membership [public](https://help.github.com/en/articles/publicizing-or-hiding-organization-membership#changing-the-visibility-of-your-organization-membership).
 
-2. Set up two-factor authentication on your account by following this [guide](https://docs.github.com/en/github/authenticating-to-github/configuring-two-factor-authentication).
+# Setting up the development environment
 
 ## Set up Docker
 
