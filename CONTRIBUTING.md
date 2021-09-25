@@ -255,27 +255,60 @@ the source files and rebuilds and refreshes the site automatically in your brows
    ```bash
    docker-compose up
    ```
-
-# Assigning yourself an issue
-   
-To contribute to the website project, the first step is to assign yourself an issue. Thankfully, GitHub provides documentation on [how to navigate assigning issues](https://docs.github.com/en/issues/tracking-your-work-with-issues/assigning-issues-and-pull-requests-to-other-github-users), which should get you started. At the website team, we manage our issues [through labels](https://docs.github.com/en/issues/using-labels-and-milestones-to-track-work/managing-labels). <!-- TODO, replace with wiki for labels --> For now, the labels you need to be aware of are:
-   
-`Size: Good first issue`: issues to get new members started
-`Size: Good second issue`: issues that further prepare members for our team
-`Size: Small`: issues that are made for those who are comfortable with starting small
-`Size: Medium`: issues for members who somewhat understand our culture and codebase  
-`Size: Large`: issues for members who have been in the team for a while, and has mastered our codebase
-`role: front end`: issues involving front end work
-`role: back end/devOps`: issues involving automations or architecture
-`role: writing`: issues involving documentation
-`role: product`: reserved for the product team
-`role: user research`: reserved for the research team
-`role: design`: reserved for the design team
-
-As a new member, you are expected to do issues along a size progression. For now, go ahead and assign yourself a `Size: Good first issue` from our [`Prioritized backlog`](https://github.com/hackforla/website/projects/7#column-7198257). Once that issue is complete (see below on how to work on an issue and putting it under review), your next issue should be `Size: Good second issue`, and then you can take any issue you desire from small to large.
-As a final note, most members should only be assigned one open issue at any time, and an issue cannot be considered done until review is completed! Until your issue is approved, do not take another issue until approved by a team lead!
    
 # Working on an issue and making a pull request
+## Assigning yourself an issue
+   
+To contribute to the website project, the first step is to assign yourself an issue. You should already be working on your very first issue, but to really understand how to contribute at the website team, you need to be assigned an issue that involves our codebase. Thankfully, we extensively curate and label our issues so that you can quickly find a good starter issue. To find one, first navigate to our project board:
+
+[TODO go to project board gif]
+
+Next, locate the [`Prioritized backlog`](https://github.com/hackforla/website/projects/7#column-7198257) column:
+
+[TODO gif to backlog]
+
+Then, filter by the 'good first issue' label:
+
+[Todo gif to good first issue]
+
+Then, filter by the 'role: frontend' label:
+
+[TODO gif to role]
+
+And, finally, assign yourself the issue at the very tippy-top of the backlog:
+
+[TODO gif to assign]
+
+<details>
+<summary>About labels at Hack For LA</summary>
+<br>
+Labels are the lifeblood of our board organization. Without it, we would not be able to manage this huge project at all! We have many labels, and not all of them would be relevant to you thoroughout your stay at HackForLA. For now, the most important labels to be aware of are the *size* labels. These labels represent the workload associated with the issue and will help you decide what issues you are most comfortable with assigning yourself to. In order from lowest time commitment to highest, the size labels are:
+
+* `good first issue`
+* `size: good second issue`
+* `size: small`
+* `size: medium`
+* `size: large`
+
+Links to more information about labels can be found at the end of the guide.
+<br>
+</details>
+
+<details>
+<summary>About issues at Hack For LA (important!)</summary>
+<br>
+At Hack For LA, issues follow a progression from one moment to the next, through six key moments. An issue cannot be considered be done until it has gone through all six moments. In chronological order, these moments are:
+
+* Issue opened
+* Issue assigned    <-- you are here!
+* Pull request opened
+* Pull request reviewed
+* Pull request closed
+* Issue closed
+
+This guide will run through every step of this process, so don't worry if this is over your head. The important thing to know is this: on the website team, every junior developer (that's you!) can **only work on one issue at a time and cannot assign themselves a second one until the first issue has been closed**. The only acception to this rule is by permission of a team lead, but this happens sparingly, and only under special circumstances. For all intents and purposes, if you are excited to work on hard, and complicated things, you are welcome to pick up issues of a higher size, rather than more issues at once.
+<br>
+</details>
 
 ## Working on an issue
 
