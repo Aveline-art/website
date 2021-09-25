@@ -4,6 +4,15 @@
 
 The following are a set of instructions to get you started on contributing to our repository. This guide includes [TODO]. You might find that some of these instructions do not work for you. In that case, feel free to propose changes here [TODO add link to our contributing issue template].
 
+Throughout this documentation, you will see a small triangle followed by text. These are actually dropdowns that you can click! They contain information and tibits that will help you along as you navigate our documentation. Try it out by clicking the text below.
+
+<details>
+<summary> How many programmers does it take to screw in a light bulb?   </summary>
+<br>
+None. It's a hardware problem.
+<br>
+</details>
+
 Note: The guide below assumes that you have completed the onboarding orientation. If you have not been onboarded, please refer to the [Getting Started Page](https://www.hackforla.org/getting-started) before continuing.
 
 <br><br>
@@ -54,16 +63,17 @@ After accepting our repository invite, it is time to follow the instructions bel
 2. Click the green “New issue” button to view our issue templates. Feel free to read through them to get a sense of what is there.
 3. For your first issue, pick “My Very First Issue” and follow the on-screen instructions.
 4. Once you are done, click submit!
-5. After submitting, you will see the issue page. In the corner, click assign yourself.
+5. After submitting, you will see the page for your very first issue! In the corner, click assign yourself.
+
+Congratulations on creating and assigning your first issue! This issue represents the remaining steps in this contributing.md file. Go ahead and read through the issue. As you complete the rest of the steps in this file, be sure to check off your progress, and leave comments as needed if you are stuck anywhere. Now you can move onto the environmental setup.
 
 
 # Setting up the development environment
-
 ## Set up Docker
 
 Docker is the recommended approach to quickly getting started with local development. Docker helps create a local/offline version of the hackforla.org website on your computer so you can test out your code before submitting a pull request.
 
-The recommended installation method for your operating system can be found [here](https://docs.docker.com/install/). <sub><i>Feel free to reach out in the hfla slack channel if you have trouble installing docker on your system</i></sub>
+The recommended installation method for your operating system can be found [here](https://docs.docker.com/install/). Feel free to reach out in the hfla slack channel if you have trouble installing docker on your system.
 
 More on using Docker and the concepts of containerization:
 
@@ -73,23 +83,39 @@ More on using Docker and the concepts of containerization:
 
 <details>
 <summary>Docker Installation Troubleshooting</summary>
-
-If you are on Windows and get 'You are not allowed to use Docker, you must be in the "docker-users" group' as an error message, the following wiki page is a guide for solving te issue:
+<br>
+If you are on Windows and get 'You are not allowed to use Docker, you must be in the "docker-users" group' as an error message, the following wiki page is a guide for solving the issue:
 - [Windows docker-users group error guide](https://github.com/hackforla/website/wiki/Adding-local-user-accounts-to-the-docker-users-group-on-Windows-10)
 
 Installing WSL2 on windows
 - https://docs.microsoft.com/en-us/windows/wsl/install-win10
+<br>
 </details>
 
 ## Installing Git
 
 Before cloning your forked repository to your local machine, you must have Git installed. You can find instructions for installing Git for your operating system [**here**](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git).
 
-Note: If you have a Mac the page offers several options (see other option, if you need to conserve hard drive space) including:
+<details>
+<summary>Note for Windows users</summary>
+<br>
+Some versions of Windows 10 is known to produce this message: You are not allowed to use Docker, you must be in the "docker-users" group. Resolving this depends on the edition you are using:
 
-- an “easiest” option (this version is fine for use at hackforla): This option takes about 4GB of space.
-- a “more up to date” option (not required but optional if you want it): This option prompts you to go to install an 8GB package manager called Homebrew. 
-- a third option: If your computer is low on space, you can use this [tutorial](https://www.datacamp.com/community/tutorials/homebrew-install-use) to install XCode Command Tools and a lighter version of Homebrew and then install Git using this command: ```$ brew install git```  which in total only uses 300MB.
+* Windows 10 Home: 
+   * Open command prompt as an administrator. This is called elevated command prompt.
+   * Run the following command, replacing USER with your own: `net localgroup docker-users USER /add`
+* Other editions:
+   * Follow [these instructions](https://icij.gitbook.io/datashare/faq-errors/you-are-not-allowed-to-use-docker-you-must-be-in-the-docker-users-group-.-what-should-i-do)
+
+<br>
+</details>
+
+<details>
+<summary>Note for Mac users</summary>
+<br>
+Git can take anywhere between 4GB to 8GB+ of hard drive space for Mac users. If your computer is low on space, you can use this [tutorial](https://www.datacamp.com/community/tutorials/homebrew-install-use) to install XCode Command Tools and a lighter version of Homebrew and then install Git using this command: ```$ brew install git```  which in total only uses 300MB.
+<br>
+</details>
 
 ## Fork the repository
 
@@ -103,8 +129,6 @@ For example -> `https://github.com/octocat/website`.
 Note that this forked copy is a remote version on GitHub. It is not yet on your local machine.
 
 ## Clone the forked repository
-
-Before cloning your forked repository to your local machine, you must have Git installed. You can find instructions for installing Git for your operating system [**here**](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git). 
 
 The following steps will create a local copy of the repository on your machine.
 
@@ -169,26 +193,6 @@ The following steps will create a local copy of the repository on your machine.
       ```
       </details>
 
-## Assigning yourself an issue
-   
-   To contribute to the website project, the first step is to assign yourself an issue. Thankfully, GitHub provides documentation on [how to navigate assigning issues](https://docs.github.com/en/issues/tracking-your-work-with-issues/assigning-issues-and-pull-requests-to-other-github-users), which should get you started. At the website team, we manage our issues [through labels](https://docs.github.com/en/issues/using-labels-and-milestones-to-track-work/managing-labels). <!-- TODO, replace with wiki for labels --> For now, the labels you need to be aware of are:
-   
-   `Size: Good first issue`: issues to get new members started
-   `Size: Good second issue`: issues that further prepare members for our team
-   `Size: Small`: issues that are made for those who are comfortable with starting small
-   `Size: Medium`: issues for members who somewhat understand our culture and codebase  
-   `Size: Large`: issues for members who have been in the team for a while, and has mastered our codebase
-   `role: front end`: issues involving front end work
-   `role: back end/devOps`: issues involving automations or architecture
-   `role: writing`: issues involving documentation
-   `role: product`: reserved for the product team
-   `role: user research`: reserved for the research team
-   `role: design`: reserved for the design team
-
-   As a new member, you are expected to do issues along a size progression. For now, go ahead and assign yourself a `Size: Good first issue` from our [`Prioritized backlog`](https://github.com/hackforla/website/projects/7#column-7198257). Once that issue is complete (see below on how to work on an issue and putting it under review), your next issue should be `Size: Good second issue`, and then you can take any issue you desire from small to large.
-   As a final note, most members should only be assigned one open issue at any time, and an issue cannot be considered done until review is completed! Until your issue is approved, do not take another issue until approved by a team lead!
-   
-
 ## Build and serve the website locally
 ### Build Up
 
@@ -251,6 +255,26 @@ the source files and rebuilds and refreshes the site automatically in your brows
    ```bash
    docker-compose up
    ```
+
+# Assigning yourself an issue
+   
+To contribute to the website project, the first step is to assign yourself an issue. Thankfully, GitHub provides documentation on [how to navigate assigning issues](https://docs.github.com/en/issues/tracking-your-work-with-issues/assigning-issues-and-pull-requests-to-other-github-users), which should get you started. At the website team, we manage our issues [through labels](https://docs.github.com/en/issues/using-labels-and-milestones-to-track-work/managing-labels). <!-- TODO, replace with wiki for labels --> For now, the labels you need to be aware of are:
+   
+`Size: Good first issue`: issues to get new members started
+`Size: Good second issue`: issues that further prepare members for our team
+`Size: Small`: issues that are made for those who are comfortable with starting small
+`Size: Medium`: issues for members who somewhat understand our culture and codebase  
+`Size: Large`: issues for members who have been in the team for a while, and has mastered our codebase
+`role: front end`: issues involving front end work
+`role: back end/devOps`: issues involving automations or architecture
+`role: writing`: issues involving documentation
+`role: product`: reserved for the product team
+`role: user research`: reserved for the research team
+`role: design`: reserved for the design team
+
+As a new member, you are expected to do issues along a size progression. For now, go ahead and assign yourself a `Size: Good first issue` from our [`Prioritized backlog`](https://github.com/hackforla/website/projects/7#column-7198257). Once that issue is complete (see below on how to work on an issue and putting it under review), your next issue should be `Size: Good second issue`, and then you can take any issue you desire from small to large.
+As a final note, most members should only be assigned one open issue at any time, and an issue cannot be considered done until review is completed! Until your issue is approved, do not take another issue until approved by a team lead!
+   
 # Working on an issue and making a pull request
 
 ## Working on an issue
