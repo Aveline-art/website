@@ -69,6 +69,10 @@ Congratulations on creating and assigning your first issue! This issue represent
 
 
 # Setting up the development environment
+## Download an IDE
+
+An IDE, or Intergrated Development Environment, is a tool used to write, run, and test code. You can feel free to use your favorite IDE that you have grown to love thoroughout your coding journey thus far. If you have no favorite so far, our IDE of choice is [Visual Studio Code](https://code.visualstudio.com/download). This IDE, is small, compact, and comes with a whole ton of useful features, like a search bar, a terminal selector, Git support, and various themes! If you have never tried VSCode, feel free to go right ahead and download it, and you, too, might fall in love with its majesty!
+
 ## Set up Docker
 
 Docker is the recommended approach to quickly getting started with local development. Docker helps create a local/offline version of the hackforla.org website on your computer so you can test out your code before submitting a pull request.
@@ -317,7 +321,7 @@ This guide will run through every step of this process, so don't worry if this i
 
 Create a new branch for each issue you work on. Doing all your work on topic branches leaves your repository's main branch (named `gh-pages`) unmodified and greatly simplifies keeping your fork in sync with the main project.
 
-1. ### Check current branch
+### Check current branch
 
    The `git branch` command will let you know what branch you are in, and what branch names are already in use.
 
@@ -335,7 +339,7 @@ Create a new branch for each issue you work on. Doing all your work on topic bra
    git checkout gh-pages
    ```
 
-2. ### Create a new branch where you will work on your issue
+### Create a new branch where you will work on your issue
 
    The `git checkout` command will create and change to a new branch where you will do the work on your issue.  In git, the checkout command lets you navigate between different branches.  Using the `-b` flag you can create a new branch and immediately switch into it. 
 
@@ -354,8 +358,6 @@ Create a new branch for each issue you work on. Doing all your work on topic bra
 
    When you've finished working on your issue, follow the steps below to prepare your changes to push to your repository. 
 
-   ### Can't see your changes locally?
-
    <details>
    <summary>If you are having trouble viewing your changes locally after running docker, click here to see instructions on how to resolve this issue</summary>
    
@@ -369,7 +371,7 @@ Create a new branch for each issue you work on. Doing all your work on topic bra
 
    </details>
 
-3. ### Prepare your changes to push to your repository
+### Prepare your changes to push to your repository
 
    Once you are done with the work on your issue you will push it to your repository.  Before you can push your work to your repository, you will stage and commit your changes.  These two commands are similar to the save command that you have used to in other programs. 
 
@@ -410,7 +412,7 @@ Create a new branch for each issue you work on. Doing all your work on topic bra
       ```
 ** If you do not see the changes you applied when you run `docker-compose up`, delete `_site` directory and `.jekyll-metadata` file and restart docker. This will force docker to rebuild the whole site. 
   
-4. ### Check upstream before you push
+### Check upstream before you push
 
    Before you push your local commits to your repository, check to see if there have been updates made in the main Hack For LA website repository. `git fetch` will check remote repositories for changes without altering your local repository.
 
@@ -461,7 +463,7 @@ Create a new branch for each issue you work on. Doing all your work on topic bra
 Your fork of this repository on GitHub, and your local clone of that fork, will
 get out of sync with this (upstream) repository from time to time.  (That's what has happened when you see something like "This branch is 1 commit behind hackforla:gh-pages" on the github website version of your hackforla repository.)
 
-5.  ### Incorporating changes from upstream
+### Incorporating changes from upstream
 
       Your fork of this repository on GitHub, and your local clone of that fork, will
       get out of sync with this (upstream) repository from time to time.  (That's what has happened when you see something like "This branch is 1 commit behind hackforla:gh-pages" on the github website version of your hackforla repository.)
